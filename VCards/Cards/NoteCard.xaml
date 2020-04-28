@@ -1,0 +1,30 @@
+﻿<Window x:Class="VCards.Cards.NoteCard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VCards.Cards"
+        xmlns:mat="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        xmlns:controls="clr-namespace:VCards.Controls"
+        mc:Ignorable="d"
+        Title="NoteCard" Height="300" MinHeight="200" MinWidth="200" Width="300" Background="Transparent" AllowsTransparency="True" WindowStyle="None" ResizeMode="CanResizeWithGrip" ShowInTaskbar="False">
+    <mat:Card VerticalAlignment="Stretch" Margin="0,0,2,2">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <controls:CardHeader x:Name="CardHeader" MouseDown="Header_MouseDown"/>
+
+            <TextBox Name="NoteText" VerticalScrollBarVisibility="Auto" FontSize="15" Grid.Row="1" Margin="5" SpellCheck.IsEnabled="True" TextWrapping="Wrap" AcceptsReturn="True" TextAlignment="Justify" VerticalAlignment="Top" TextOptions.TextHintingMode="Animated"/>
+
+        </Grid>
+    </mat:Card>
+</Window>
